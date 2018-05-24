@@ -13,9 +13,9 @@ var monk =require('monk');
 // not using local db:  
 //var db = monk('localhost:27017/nodetest2');
 // use our connection string copied from the cloud mongo.
+var db = monk('mongodb://bcstudent:bcstudent@ds014648.mlab.com:14648/prog2192018');
+
 //var db = monk('mongodb://KCFlynn:bcstudent1@ds014658.mlab.com:14658/usercollection');
- var db = monk('mongodb://bcstudent:bcstudent@ds014648.mlab.com:14648/prog2192018'); // instructor's db
-//var db = monk('mongodb://doug219:progdou219@ds259079.mlab.com:59079/cottrill-prog219'); // Doug's db
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -31,7 +31,7 @@ app.use(logger('dev'));
 //app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(__dirname + '/public/favicon.ico'));
+//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

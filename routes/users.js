@@ -16,11 +16,7 @@ router.post('/adduser', function(req, res) {
 /* GET userlist. */
 router.get('/userlist', function(req, res) {
   var db = req.db;
-    var collection = db.get('playerlist');
-//debug
-    console.log('GET route on userlist.');
-    console.log(collection);
-
+   var collection = db.get('playerlist');
    collection.find({},{},function(e,docs){
      res.json(docs);
    });
